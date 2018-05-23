@@ -1,0 +1,35 @@
+ol {
+    max-width: 10%;
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul {
+    max-width: 30%;
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol li {
+    width:300px;
+    max-width: 10%;
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul li {
+    width:300px;
+    
+    background: #cce5ff;
+    margin: 5px;
+}
+
+input {
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: #3CBC8D;
+
+  
+}
+

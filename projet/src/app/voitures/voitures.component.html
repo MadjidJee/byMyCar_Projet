@@ -1,0 +1,51 @@
+<ul *ngFor="let e of voitures">
+  <li>
+      <button (click)="editListeVoitures(e.id)">editer</button>
+    <div>
+      {{e.marque|uppercase}}
+    </div>
+  </li>
+  <li>
+    <div>
+
+      {{e.modele}}
+      
+    </div>
+  </li>
+  <li>
+    <div>
+
+      {{e.prix}}
+     
+    </div>
+  </li>
+</ul>
+
+
+
+
+<p>Ajouter une voiture :
+  <input [(ngModel)]="voiture.voiture" />
+  <br>
+</p>
+<p>Ajouter une marque :
+  <input [(ngModel)]="voiture.marque" />
+  <br> </p>
+<p>Ajouter un modele :
+  <input [(ngModel)]="voiture.modele" />
+  <br> </p>
+<p>Ajouter une prix :
+  <input [(ngModel)]="voiture.prix" />
+  <br>
+</p>
+
+<button (click)="addVoiture()" *ngIf="!edit">Ajouter une voiture</button>
+<button (click)="iditOver()" *ngIf="edit">Soumettre</button>
+
+<p>hello</p>
+<p>hello</p>
+<p>hello</p>
+<p>hello</p>
+<p>hello</p>
+
+<p>hello</p>
