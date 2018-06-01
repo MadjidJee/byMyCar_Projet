@@ -7,7 +7,7 @@ ol {
 ul {
     width: 200px;
     max-width: 50%;
-    background: #3399ff;
+    background: #C6402B;
     padding: 30px;
 }
 
@@ -27,7 +27,7 @@ ul li {
 }
 
 input {
-    border: 2px solid rgb(103, 14, 175);;
+    border: 2px solid rgb(103, 14, 175);
     border-radius: 4px;
     background-color: rgb(132, 179, 162);
 

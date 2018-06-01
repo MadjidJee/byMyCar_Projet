@@ -1,0 +1,13 @@
+<select name="listeRegions" ngModel (change)="refrech()">
+    <option> Selectionner votre region </option>
+    <option *ngFor="let e of listeRegions" [ngValue]="nom">
+        {{ e.nom }}
+    </option>
+</select>
+
+<select (change)="refrech()">
+    <option> Selectionner votre region </option>
+    <option *ngFor="let v of listeMarquesFiltree" [ngValue]="marque">
+        {{v.marque }}
+    </option>
+</select>

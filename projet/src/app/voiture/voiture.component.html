@@ -1,0 +1,23 @@
+<div *ngIf="voiture">
+    <ul>
+        <li>
+          <div>
+            <p><b>Marque : </b> {{voiture.marque}}</p>
+
+          </div>
+        </li>
+        <li>
+          <div>
+           <p><b> Modele  :</b> {{voiture.modele}}</p> 
+          </div>
+        </li>
+        <li>
+          <div>
+            <p><b>Prix : </b>{{voiture.prix}}</p>
+          </div>
+        </li>
+      </ul>
+</div>
+<img [src] = "'/assets/images/' + voiture.photo">
+
+  

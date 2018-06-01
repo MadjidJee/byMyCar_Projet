@@ -1,22 +1,42 @@
+<div *ngIf="selectedVoiture != null">
+  <app-voiture-detail [voiture]="selectedVoiture"> </app-voiture-detail>
+
+</div>
+
+<select>
+  <option value="selectionner">selectionner une région</option>
+  <option value="Bretage">Bretagne</option>
+  <option value="Pays de la Loire ">Pays de la Loire</option>
+  <option value="Centre">Centre</option>
+  <option value="PoitouCharentes">Poitou-Charentes</option>
+  <option value="Aquitaine">Aquitaine</option>
+
+</select>
+
 <ul *ngFor="let e of voitures">
+
+  <button (click)="onSelect(e)">Details</button>
+  <button (click)="editListeVoitures(e.id)">editer</button>
+  <a [routerLink]="['/voiture',e.id]">Voir </a>
+
+
   <li>
-      <button (click)="editListeVoitures(e.id)">editer</button>
     <div>
-      {{e.marque|uppercase}}
+
+      <p>
+        <b>Marque : </b> {{e.marque}}</p>
     </div>
   </li>
   <li>
     <div>
-
-      {{e.modele}}
-      
+      <p>
+        <b>Modele : </b> {{e.modele}} </p>
     </div>
   </li>
   <li>
     <div>
-
-      {{e.prix}}
-     
+      <p>
+        <b>Prix : </b> {{e.prix}} </p>
     </div>
   </li>
 </ul>
@@ -25,7 +45,6 @@
 
 
 <p>Ajouter une voiture :
-  <input [(ngModel)]="voiture.voiture" />
   <br>
 </p>
 <p>Ajouter une marque :
@@ -39,13 +58,15 @@
   <br>
 </p>
 
+
 <button (click)="addVoiture()" *ngIf="!edit">Ajouter une voiture</button>
-<button (click)="iditOver()" *ngIf="edit">Soumettre</button>
+<button (click)="iditOver()" *ngIf="edit">Soumettre
+  <br> </button>
+<p></p>
+
 
 <p>hello</p>
 <p>hello</p>
 <p>hello</p>
 <p>hello</p>
-<p>hello</p>
-
 <p>hello</p>

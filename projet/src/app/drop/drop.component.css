@@ -1,0 +1,23 @@
+
+  .liste {
+   
+    font-size: 18px;
+    margin: auto;
+    border: 2px solid #EE9688;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #CFED85 ;
+    padding: 5px;
+    
+  }
+
+  .liste select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+   
+}
