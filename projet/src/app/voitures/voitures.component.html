@@ -1,72 +1,80 @@
-<div *ngIf="selectedVoiture != null">
-  <app-voiture-detail [voiture]="selectedVoiture"> </app-voiture-detail>
+<body>
+  
 
-</div>
+  <div *ngIf="selectedVoiture != null">
+    <app-voiture-detail [voiture]="selectedVoiture"> </app-voiture-detail>
+  </div>
 
-<select>
-  <option value="selectionner">selectionner une région</option>
-  <option value="Bretage">Bretagne</option>
-  <option value="Pays de la Loire ">Pays de la Loire</option>
-  <option value="Centre">Centre</option>
-  <option value="PoitouCharentes">Poitou-Charentes</option>
-  <option value="Aquitaine">Aquitaine</option>
+  <select>
+    <option value="selectionner">selectionner une région</option>
+    <option value="Bretage">Bretagne</option>
+    <option value="Pays de la Loire ">Pays de la Loire</option>
+    <option value="Centre">Centre</option>
+    <option value="PoitouCharentes">Poitou-Charentes</option>
+    <option value="Aquitaine">Aquitaine</option>
 
-</select>
+  </select>
 
-<ul *ngFor="let e of voitures">
+  <ul *ngFor="let e of voitures">
 
-  <button (click)="onSelect(e)">Details</button>
-  <button (click)="editListeVoitures(e.id)">editer</button>
-  <a [routerLink]="['/voiture',e.id]">Voir </a>
-
-
-  <li>
-    <div>
-
-      <p>
-        <b>Marque : </b> {{e.marque}}</p>
-    </div>
-  </li>
-  <li>
-    <div>
-      <p>
-        <b>Modele : </b> {{e.modele}} </p>
-    </div>
-  </li>
-  <li>
-    <div>
-      <p>
-        <b>Prix : </b> {{e.prix}} </p>
-    </div>
-  </li>
-</ul>
+    <button (click)="onSelect(e)">Details</button>
+    <button (click)="editListeVoitures(e.id)">editer</button>
+    <a [routerLink]="['/voiture',e.id]">Voir </a>
 
 
+    <li>
+      <div>
+
+        <p>
+          <b>Marque : </b> {{e.marque}}</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p>
+          <b>Modele : </b> {{e.modele}} </p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <p>
+          <b>Prix : </b> {{e.prix}} </p>
+      </div>
+    </li>
+  </ul>
 
 
-<p>Ajouter une voiture :
-  <br>
-</p>
-<p>Ajouter une marque :
-  <input [(ngModel)]="voiture.marque" />
-  <br> </p>
-<p>Ajouter un modele :
-  <input [(ngModel)]="voiture.modele" />
-  <br> </p>
-<p>Ajouter une prix :
-  <input [(ngModel)]="voiture.prix" />
-  <br>
-</p>
 
 
-<button (click)="addVoiture()" *ngIf="!edit">Ajouter une voiture</button>
-<button (click)="iditOver()" *ngIf="edit">Soumettre
-  <br> </button>
-<p></p>
+  <p>Ajouter une voiture :
+    <br>
+  </p>
+  <p>Ajouter une marque :
+    <input [(ngModel)]="voiture.marque" />
+    <br> </p>
+  <p>Ajouter un modele :
+    <input [(ngModel)]="voiture.modele" />
+    <br> </p>
+  <p>Ajouter une prix :
+    <input [(ngModel)]="voiture.prix" />
+    <br>
+  </p>
 
 
-<p>hello</p>
-<p>hello</p>
-<p>hello</p>
-<p>hello</p>
-<p>hello</p>
+  <button (click)="addVoiture()" *ngIf="!edit">Ajouter une voiture</button>
+  <button (click)="iditOver()" *ngIf="edit">Soumettre
+    <br> </button>
+  <p></p>
+
+
+
+
+  <p>hello</p>
+  <p>hello</p>
+  <p>hello</p>
+  <p>hello</p>
+  <p>hello</p>
+  
+
+
+</body>

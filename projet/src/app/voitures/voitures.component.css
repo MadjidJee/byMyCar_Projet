@@ -1,3 +1,8 @@
+body{
+    font-family: 'Open sans', sans-serif;
+    background-image: url("/assets/images/old.jpg");
+    background-size: 100%;
+}
 ol {
     max-width: 100%;
     background: #ff9999;
